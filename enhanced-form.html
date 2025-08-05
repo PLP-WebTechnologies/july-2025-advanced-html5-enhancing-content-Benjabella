@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Android Rooting 101 – From Lists to Forms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body{
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 1.5rem;
+      background:#121212;
+      color:#e0e0e0;
+      line-height:1.55;
+    }
+    header, main, footer{
+      max-width: 900px;
+      margin: auto;
+    }
+    section{margin-bottom:2.5rem;}
+    h1,h2{color:#3DDC84;}
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin-top:.5rem;
+    }
+    th,td{
+      padding:.45rem .7rem;
+      border:1px solid #3DDC84;
+      text-align:left;
+    }
+    th{background:#003d2b;}
+    form fieldset{
+      border:1px solid #3DDC84;
+      margin-bottom:1rem;
+      padding:1rem;
+    }
+    legend{font-weight:600;}
+    label{display:block;margin:.5rem 0 .15rem;}
+    input,select,textarea,button{
+      font:inherit;
+      width:100%;
+      padding:.5rem;
+      box-sizing:border-box;
+      background:#1e1e1e;
+      color:#e0e0e0;
+      border:1px solid #3DDC84;
+    }
+    input[type=checkbox],input[type=radio]{width:auto;margin-right:.4rem;}
+    .inline{display:inline-block;width:auto;margin-right:.8rem;}
+    button{
+      width:auto;
+      padding:.65rem 1.4rem;
+      background:#3DDC84;
+      color:#000;
+      border:none;
+      cursor:pointer;
+    }
+    button:hover{background:#00c853;}
+    .error{color:#ff5252;font-size:.9rem;}
+    img,video,audio{max-width:100%;height:auto;margin:.5rem 0;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Android Rooting 101</h1>
+  <p>This page walks you through the essentials of Android rooting - covering tools, risks, and a sign-up form to join our hands-on workshop.</p>
+</header>
+
+<main>
+
+  <!-- 1. LISTS SECTION -->
+  <section id="lists">
+    <h2>Rooting Roadmap</h2>
+    <ol>
+      <li>Preparation
+        <ul>
+          <li>Backup data via ADB</li>
+          <li>Unlock bootloader</li>
+        </ul>
+      </li>
+      <li>Tools &amp; Files
+        <ul>
+          <li>Platform-tools (ADB &amp; Fastboot)</li>
+          <li>Custom recovery (TWRP)</li>
+          <li>Magisk APK</li>
+        </ul>
+      </li>
+      <li>Rooting Process
+        <ul>
+          <li>Flash recovery</li>
+          <li>Patch boot image with Magisk</li>
+          <li>Reboot &amp; verify root via SafetyNet</li>
+        </ul>
+      </li>
+    </ol>
+  </section>
+
+  <!-- 2. TABLES SECTION -->
+  <section id="tables">
+    <h2>Popular Devices &amp; Unlock Policies</h2>
+    <table>
+      <caption>Bootloader Unlock &amp; Root Status for Top 2024 Phones</caption>
+      <thead>
+        <tr>
+          <th scope="col">Device</th>
+          <th scope="col">Unlock Allowed</th>
+          <th scope="col">TWRP Available</th>
+          <th scope="col">Root Method</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Pixel 8 Pro</td>
+          <td>Yes (official)</td>
+          <td>Yes</td>
+          <td>Magisk patched boot.img</td>
+        </tr>
+        <tr>
+          <td>Samsung Galaxy S24</td>
+          <td>No (Snapdragon US)</td>
+          <td>No</td>
+          <td>Not possible</td>
+        </tr>
+        <tr>
+          <td>Xiaomi 13</td>
+          <td>Yes (7-day wait)</td>
+          <td>Yes</td>
+          <td>Fastboot flash Magisk.apk</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- 3. MEDIA SECTION -->
+  <section id="media">
+    <h2>Embedded Media</h2>
+
+    <!-- 3a. Image -->
+    <figure>
+      <img src="https://images.pexels.com/photos/33242735/pexels-photo-33242735.jpeg"
+           alt="Android rooting">
+      <figcaption>Rooting is giving you the powers to control.</figcaption>
+    </figure>
+
+    <!-- 3b. Audio -->
+    <h3>Boot Animation Sound</h3>
+    <audio controls preload="metadata">
+      <source src="https://cdn.pixabay.com/download/audio/2025/02/09/audio_fbbb8aa0d4.mp3?filename=ringtone-298889.mp3" type="audio/mpeg">
+      <p>Your browser does not support the audio element.</p>
+    </audio>
+
+    <!-- 3c. Video -->
+    <h3>The Powers of Rooting</h3>
+    <video controls width="640" height="360" preload="metadata"
+           poster="https://via.placeholder.com/640x360/000000/3DDC84?text=Magisk+Video">
+      <source src="https://videos.pexels.com/video-files/8466283/8466283-uhd_2560_1440_25fps.mp4" type="video/mp4">
+      <track kind="captions" src="captions.vtt" srclang="en" label="English">
+      <p>Your browser does not support the video element.</p>
+    </video>
+  </section>
+
+  <!-- 4. HTML5 MASTER FORM -->
+  <section id="form-section">
+    <h2>Join the Rooting Workshop</h2>
+    <form action="#" method="post" novalidate>
+      <!-- Personal Details -->
+      <fieldset>
+        <legend>Personal Details</legend>
+
+        <label for="fname">First Name *</label>
+        <input type="text" id="fname" name="firstName"
+               placeholder="John" required autocomplete="given-name">
+
+        <label for="lname">Last Name *</label>
+        <input type="text" id="lname" name="lastName"
+               placeholder="Doe" required autocomplete="family-name">
+
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email"
+               placeholder="john@example.com"
+               required autocomplete="email">
+
+        <label for="tel">Phone Number *</label>
+        <input type="tel" id="tel" name="phone"
+               placeholder="+1-555-123-4567"
+               required autocomplete="tel"
+               pattern="^\+?[0-9\s\-]{7,15}$">
+
+        <label for="dob">Date of Birth *</label>
+        <input type="date" id="dob" name="dob"
+               max="2025-12-31"
+               required
+               style="color-scheme: dark;">
+
+        <label for="forum">XDA/Forum Username</label>
+        <input type="text" id="forum" name="forumUser"
+               placeholder="rootMaster99">
+      </fieldset>
+
+      <!-- Device Info -->
+      <fieldset>
+        <legend>Device Information</legend>
+
+        <label for="brand">Phone Brand *</label>
+        <select id="brand" name="brand" required>
+          <option value="" disabled selected>Select brand…</option>
+          <option value="google">Google</option>
+          <option value="samsung">Samsung</option>
+          <option value="xiaomi">Xiaomi</option>
+          <option value="oneplus">OnePlus</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="model">Model *</label>
+        <input type="text" id="model" name="model"
+               placeholder="Pixel 8 Pro" required>
+
+        <label for="android">Android Version *</label>
+        <input type="text" id="android" name="androidVersion"
+               placeholder="14"
+               pattern="\d{1,2}(\.\d)?"
+               required>
+
+        <label>Bootloader Status *</label>
+        <label class="inline">
+          <input type="radio" name="bootloader" value="locked" required>
+          Locked
+        </label>
+        <label class="inline">
+          <input type="radio" name="bootloader" value="unlocked" required>
+          Unlocked
+        </label>
+        <label class="inline">
+          <input type="radio" name="bootloader" value="unknown" required>
+          Unknown
+        </label>
+      </fieldset>
+
+      <!-- Skills & Goals -->
+      <fieldset>
+        <legend>Skills &amp; Goals</legend>
+
+        <label>Experience Level *</label>
+        <select id="level" name="level" required>
+          <option value="" disabled selected>Select level…</option>
+          <option value="beginner">Beginner – never rooted</option>
+          <option value="intermediate">Intermediate – rooted once</option>
+          <option value="advanced">Advanced – custom ROMs</option>
+        </select>
+
+        <label>Topics of Interest (check all that apply)</label>
+        <label>
+          <input type="checkbox" name="topics" value="magisk">
+          Magisk &amp; modules
+        </label>
+        <label>
+          <input type="checkbox" name="topics" value="twrp">
+          TWRP recovery
+        </label>
+        <label>
+          <input type="checkbox" name="topics" value="rom">
+          Custom ROMs (LineageOS, Pixel Experience)
+        </label>
+        <label>
+          <input type="checkbox" name="topics" value="kernel">
+          Kernel tweaking
+        </label>
+        <label>
+          <input type="checkbox" name="topics" value="safety">
+          Passing SafetyNet &amp; Play Integrity
+        </label>
+      </fieldset>
+
+      <!-- Final Steps -->
+      <fieldset>
+        <legend>Final Steps</legend>
+
+        <label for="comments">Comments / Special Requests</label>
+        <textarea id="comments" name="comments"
+                  rows="4"
+                  placeholder="e.g., bricked device stories, desired ROMs…"></textarea>
+
+        <label for="logcat">Upload last logcat (optional, .txt ≤ 500 KB)</label>
+        <input type="file"
+               id="logcat"
+               name="logcat"
+               accept=".txt"
+               aria-describedby="logHelp">
+        <span id="logHelp" class="error">Optional debug log.</span>
+
+        <label>
+          <input type="checkbox" name="liability" required>
+          I accept full responsibility for any risks involved in rooting my device *
+        </label>
+
+        <label>
+          <input type="checkbox" name="newsletter">
+          Receive root news &amp; security alerts (optional)
+        </label>
+
+        <!-- Hidden honeypot -->
+        <input type="text" name="honeypot" style="display:none" readonly>
+      </fieldset>
+
+      <button type="submit">Register for Workshop</button>
+    </form>
+  </section>
+</main>
+
+<footer style="text-align: center">
+    <p>&copy; 2025 Android Rooting Workshop. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
